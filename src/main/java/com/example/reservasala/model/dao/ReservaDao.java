@@ -118,7 +118,7 @@ public class ReservaDao {
 
         return listReservas;
     }
-    public Boolean update(Reserva reserva) {
+    public Boolean atualizarReserva(Reserva reserva) {
         String sql = "UPDATE reserva SET numeroSala = ?, curso = ?, disciplina = ?, professor = ?, data = ?, horarioEntrada = ?, horarioSaida = ?, informatica = ?, turno = ? WHERE id = ?";
 
         try (PreparedStatement stmt = connection.prepareStatement(sql)) {
@@ -145,4 +145,6 @@ public class ReservaDao {
             return false;
         }
     }
+
+
 }

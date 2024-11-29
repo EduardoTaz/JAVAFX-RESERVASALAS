@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="765.0" prefWidth="792.0" spacing="10.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservasala.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="765.0" prefWidth="792.0" spacing="10.0" xmlns="http://javafx.com/javafx/17.0.6" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.reservasala.HelloController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
   </padding>
@@ -96,7 +96,7 @@
                   <Font size="15.0" />
                </font>
             </TextField>
-            <Label contentDisplay="CENTER" text=" Hora Saida: " textAlignment="CENTER">
+            <Label contentDisplay="CENTER" text=" Hora Saída: " textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="15.0" />
                </font>
@@ -115,7 +115,7 @@
                   <Font name="System Bold" size="15.0" />
                </font>
             </Label>
-            <TextField fx:id="txtId" alignment="CENTER" disable="true" editable="false" prefHeight="43.0" prefWidth="65.0">
+            <TextField fx:id="txtIdBuscar" alignment="CENTER" disable="true" editable="false" prefHeight="43.0" prefWidth="65.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -156,7 +156,7 @@
       </HBox>
       <HBox alignment="CENTER" prefHeight="59.0" prefWidth="752.0" spacing="20.0">
          <children>
-            <TextField fx:id="txtCodigo" prefHeight="64.0" prefWidth="424.0">
+            <TextField fx:id="txtId" prefHeight="64.0" prefWidth="424.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -166,14 +166,14 @@
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
-            <Button fx:id="btnDeletar" mnemonicParsing="false" onAction="#onClickDelete" text="Deletar">
+            <Button fx:id="btnDeletar" mnemonicParsing="false" onAction="#onExcluir" text="Deletar">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </Button>
          </children>
       </HBox>
-      <TableView fx:id="tbvReservas" onMouseClicked="#onMouseClick" prefHeight="223.0" prefWidth="626.0">
+      <TableView fx:id="tbvReservas" onMouseClicked="#onTableClick" prefHeight="223.0" prefWidth="626.0">
          <columns>
             <TableColumn fx:id="tbcId" prefWidth="28.0" text="ID" />
             <TableColumn fx:id="tbcNumeroSala" minWidth="0.0" prefWidth="62.0" text="Nº Sala" />
@@ -190,5 +190,10 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
+      <Button fx:id="btnNovoCadastro" mnemonicParsing="false" onAction="#onClickNovoCadastro" prefHeight="44.0" prefWidth="266.0" text="Novo cadastro">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Button>
    </children>
 </VBox>
